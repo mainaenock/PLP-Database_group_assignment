@@ -77,9 +77,9 @@ CREATE TABLE product_attribute (
   product_id INT,  
   name VARCHAR(100) NOT NULL,  
   value VARCHAR(200) NOT NULL,  
-  attribute_type_id INT,  
-  attribute_category_id INT,  
+  attr_type_id INT,  
+  attr_category_id INT,  
   FOREIGN KEY (product_id) REFERENCES products(id),  
-  FOREIGN KEY (attribute_type_id) REFERENCES attribute_type(id),  
-  FOREIGN KEY (attribute_category_id) REFERENCES attribute_category(id)  
+  FOREIGN KEY (attr_type_id) REFERENCES attr_type(id),  
+  FOREIGN KEY (attr_category_id) REFERENCES attr_category(id)  
 );  
